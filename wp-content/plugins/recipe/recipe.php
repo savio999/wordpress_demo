@@ -13,6 +13,7 @@ if( ! function_exists('add_action')) {
 }
 
 //setup
+define('RECIPE_PLUGIN_URL', __FILE__);
 
 //includes
 include 'includes/activate.php';
