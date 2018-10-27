@@ -19,6 +19,8 @@ define('RECIPE_PLUGIN_URL', __FILE__);
 include 'includes/activate.php';
 include 'includes/init.php';
 include 'includes/admin/admin_init.php';
+include 'process/save_post.php';
+include 'process/filter-content.php';
 
 //hooks
 register_activation_hook(__FILE__, 'r_register_hook');
@@ -26,6 +28,7 @@ register_activation_hook(__FILE__, 'r_register_hook');
 add_action('init','recipe_init');
 
 add_action('admin_init','recipe_admin_init');
+add_filter('the_content', 'r_filter_recipe_content');
 //shortcodes
 
 
